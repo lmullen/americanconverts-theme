@@ -29,7 +29,7 @@
     <div id="recent-items">
         <h2><?php echo __('Recently Added Items'); ?></h2>
         <?php 
-        $homepageRecentItems = (int)get_theme_option('Homepage Recent Items') ? get_theme_option('Homepage Recent Items') : '3';
+        $homepageRecentItems = (int)get_theme_option('Homepage Recent Items') ? get_theme_option('Homepage Recent Items') : '4';
         set_loop_records('items', get_recent_items($homepageRecentItems));
         if (has_loop_records('items')): 
         ?>

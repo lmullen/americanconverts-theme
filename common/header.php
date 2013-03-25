@@ -46,6 +46,21 @@
     queue_js_file('globals');
     echo head_js(); 
     ?>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-39387815-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
@@ -63,6 +78,22 @@
                 <div id="search-wrap">
                     <h2>Search</h2>
                     <?php echo search_form(array('show_advanced' => true)); ?>
+                </div>
+                <div id="sidebar-description">
+                  <?php if ( $description = option('description')): ?>
+                  <p id="tagline"><?php echo $description; ?></p>
+                  <?php endif; ?>
+
+                  <h5 id="credit-header">Principal Investigators:</h5>
+                  <ul id="credit">
+                    <li> <a href="http://history.uconn.edu/graduate/bartram.php">Erin Bartram</a>, <br/> University of Connecticut</li>
+                    <li> <a href="http://lincolnmullen.com">Lincoln A. Mullen</a>, <br/> Brandeis University </li>
+                  </ul>
+                  <div id="twitter"><a href="https://twitter.com/convertsDB" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @convertsDB</a></div>
+                  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+                <div id="blog">
+                  <p><a href="http://lincolnmullen.com/blog/categories/american-converts-database/">Blog posts about the project</a></p>
                 </div>
             </nav>
             <div id="content">
