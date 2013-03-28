@@ -20,6 +20,9 @@
 
     <?php fire_plugin_hook('public_head', array('view'=>$this)); ?>
 
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="<?php echo img('favicon.png'); ?>" />
+    <link rel="shortcut icon" href="<?php echo img('favicon.png'); ?>" />
 
     <!-- Stylesheets -->
     <?php
@@ -91,9 +94,6 @@
                   </ul>
                   <div id="twitter"><a href="https://twitter.com/convertsDB" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @convertsDB</a></div>
                   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                </div>
-                <div id="blog">
-                  <p><a href="http://lincolnmullen.com/blog/categories/american-converts-database/">Blog posts about the project</a></p>
                 </div>
             </nav>
             <div id="content">
